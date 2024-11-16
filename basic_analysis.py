@@ -1,9 +1,8 @@
 # 本文件用于基础的数据分析和提取：读取数据并将其中可以利用的数据进行规范化；将规范化的数据保存到xiaomi_kaggle_upload_cleaned.csv文件中；
 # 从评分角度出发，绘制其与价格、电池容量、存储容量和内存的散点图，以展示它们之间的关系；检查是否可以找出一些聚类的特征；是否存在离群点。
 import matplotlib.pyplot as plt
-from matplotlib.ticker import MultipleLocator
 import pandas as pd
-
+from matplotlib.ticker import MultipleLocator
 
 # 读取数据
 data = pd.read_csv('xiaomi_kaggle_upload.csv')

@@ -1,4 +1,5 @@
 # 本文件用于数据的标准化（Normalization），将标准化数据保存在xiaomi_kaggle_upload_scaled.csv，并使用手肘法确定最佳簇数；
+# 输出的图像为手肘法的结果，用于确定最佳簇数。
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.cluster import KMeans
@@ -10,8 +11,8 @@ data = pd.read_csv('xiaomi_kaggle_upload_cleaned.csv')
 # 分簇的特征：评分、价格、电池容量、存储容量和内存
 # 丢弃缺失值
 # 如果要使用别的特征，修改下面features中的内容即可
-# features = data[['ratings', 'price']].dropna()
-features = data[['ratings', 'price', 'battery_capacity', 'storage_capacity', 'ram_capacity']].dropna()
+features = data[['ratings', 'price']].dropna()
+# features = data[['ratings', 'price', 'battery_capacity', 'storage_capacity', 'ram_capacity']].dropna()
 
 # 标准化特征
 scaler = StandardScaler()
